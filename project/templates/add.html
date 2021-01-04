@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Add client page</title>
+{% endblock %}
+
+{% block body %}
+
+    <form
+            action="/add"
+            method="POST"
+            class="form-register"
+            style="color:white">
+
+        {{ form.hidden_tag() }}
+
+        <h1 class="h3 mb-3 font-weight-normal">Add new client</h1>
+
+        {{ form.name.label() }}
+        {{ form.name(class="form-control text-center") }}
+
+        {{ form.pib.label() }}
+        {{ form.pib(class="form-control text-center") }}
+
+        {{ form.contact.label() }}
+        {{ form.contact(class="form-control text-center") }}
+
+        {{ form.submit(class="form-control btn btn-large btn-success mt-5") }}
+    </form>
+</div>
+
+{% endblock %}
